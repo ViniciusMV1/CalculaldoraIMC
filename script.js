@@ -41,15 +41,11 @@ iconReset.addEventListener("click",  function (){
     }, 500);
 })
 
-const inputSexo = document.createElement("input");
+const inputSexo = document.querySelector('.checkbox-element');
 var checkbox = document.createElement('input');
 checkbox.type = "checkbox";
-checkbox.name = "minhaCheckbox";
-checkbox.value = "valorDaCheckbox";
-checkbox.style.position = "fixed";
-checkbox.style.right = "74%";
-checkbox.style.top = "27%"
 checkbox.id = "sexo";
+checkbox.style.transform = 'translate(-309px,130px)'
 header.appendChild(checkbox);
 checkbox.style.fontFamily = "'Chakra Petch', sans-serif";
 checkbox.addEventListener("mouseenter", function () {
@@ -59,21 +55,17 @@ const sexo = document.createElement("p");
 header.appendChild(sexo);
 sexo.textContent = "Masculino";
 sexo.style.position = "relative";
-sexo.style.right = "22%";
-sexo.style.top = "74px"
+sexo.style.right = "21%";
+sexo.style.top = "96px"
 sexo.style.fontFamily = "'Chakra Petch', sans-serif";
 sexo.addEventListener("mouseenter", function (){
     sexo.style.border = "0px solid #fff";
 })
 
-const inputSexo2 = document.createElement("input");
+const inputSexo2 = document.querySelector('.checkbox2-element');
 var checkbox2 = document.createElement('input');
+checkbox2.style.transform = 'translate(-200px,60px)'
 checkbox2.type = "checkbox";
-checkbox2.name = "minhaCheckbox";
-checkbox2.value = "valorDaCheckbox";
-checkbox2.style.position = "fixed";
-checkbox2.style.right = "67%";
-checkbox2.style.top = "27%"
 checkbox2.id = "sexo2";
 header.appendChild(checkbox2);
 checkbox.style.fontFamily = "'Chakra Petch', sans-serif";
@@ -84,7 +76,7 @@ const sexo2 = document.createElement("p");
 header.appendChild(sexo2);
 sexo2.textContent = "Feminino"
 sexo2.style.position = "relative";
-sexo2.style.right = "15.2%";
+sexo2.style.right = "12.5%";
 sexo2.style.top = "25px";
 sexo2.style.fontFamily = "'Chakra Petch', sans-serif"
 sexo2.addEventListener("mouseenter", function (){
