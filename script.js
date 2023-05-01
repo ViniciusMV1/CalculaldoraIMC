@@ -230,22 +230,38 @@ calcularbtn.addEventListener("click", function() {
     if (!no && !p && !al && !idade) {
         return
     }
-    
 
+    const saida = document.createElement("div");
+    header.appendChild(saida);
+    saida.style.display = "flex";
+    saida.style.justifyContent = "center";
+    saida.style.fontFamily = "'Chakra Petch', sans-serif";
+    saida.style.width = "70%";
+    saida.style.margin = ".5% 1%";
+    saida.style.fontw
+    saida.style.padding = "1% 1%";
+    saida.style.border = "2px solid #141301";
+    saida.style.borderRadius = "4px";
+    
     if (imc < 18.5) {
-        corDeFundo = '#FF0000'; 
+        saida.style.backgroundColor = '#FF0000';
+        saida.textContent = `Olá ${no}! Você tem ${idade} anos e seu IMC é: ${imc}, você está abaixo do peso ideal!`;
     } else if (imc < 25) {
-        corDeFundo = '#00FF00';
+        saida.style.backgroundColor = '#00FF00';
+        saida.textContent = `Olá ${no}! Você tem ${idade} anos e seu IMC é: ${imc}, você está no peso ideal!`;
     } else if (imc < 30) {
-        corDeFundo = '#FFA500';
+        saida.style.backgroundColor = '#FFA500';
+        saida.textContent = `Olá ${no}! Você tem ${idade} anos e seu IMC é: ${imc}, você está tem obesidade leve`
     } else if (imc < 35) {
-        corDeFundo = '#FF4500';
+        saida.style.backgroundColor = '#FF4500';
+        saida.textContent = `Olá ${no}! Você tem ${idade} anos e seu IMC é: ${imc}, você tem uma obesidade moderada!`;
     } else if (imc < 40) {
-        corDeFundo = '#FF0000';
+        saida.style.backgroundColor = '#FF0000';
+        saida.textContent = `Olá ${no}! Você tem ${idade} anos e seu IMC é: ${imc}, você está uma obesidade morbida!`;
     } else {
-        corDeFundo = '#8B0000';
+        saida.style.backgroundColor = '#8B0000';
     }
-     
+
     const div = document.createElement("div");
     div.style.backgroundColor = corDeFundo;
     const pNnome = document.createElement("p");
@@ -259,12 +275,81 @@ calcularbtn.addEventListener("click", function() {
     div.appendChild(pImc);
     div.style.display = 'flex';
     div.style.justifyContent = 'space-between';
-    
+
+    document.getElementById("nome").value = ("");
+    document.getElementById("peso").value = ("");
+    document.getElementById("altura").value = ("");
+    document.getElementById("idade").value = ("");
+
     const li = document.createElement("li");
     li.style.marginTop = "10px"
     li.appendChild(div);
     ul.appendChild(li);
+
 })
+
+const legenda = document.createElement("footer");
+header.appendChild(legenda);
+legenda.style.width = "100%";
+legenda.style.display = "flex";
+legenda.style.justifyContent = "space-around";
+legenda.style.alignItems = "center";
+legenda.style.fontFamily = "'Chakra Petch', sans-serif";
+
+const pesobaixo = document.createElement("div");
+legenda.appendChild(pesobaixo);
+pesobaixo.textContent = "Abaixo do peso";
+pesobaixo.style.backgroundColor = "#FF0000";
+pesobaixo.style.width = "10%";
+pesobaixo.style.margin = "1% .5%";
+pesobaixo.style.padding = ".5% .2%";
+pesobaixo.style.border = "2px solid #141301";
+pesobaixo.style.borderRadius = "5px";
+pesobaixo.style.textAlign = "center";
+
+const pesoNormal = document.createElement("div");
+legenda.appendChild(pesoNormal);
+pesoNormal.textContent = "Peso Normal";
+pesoNormal.style.backgroundColor = "#00FF00";
+pesoNormal.style.width = "10%";
+pesoNormal.style.margin = ".5% .5%";
+pesoNormal.style.padding = ".5% .2%";
+pesoNormal.style.border = "2px solid #141301";
+pesoNormal.style.borderRadius = "5px";
+pesoNormal.style.textAlign = "center";
+
+const sobrePeso = document.createElement("div");
+legenda.appendChild(sobrePeso);
+sobrePeso.textContent = "Obesidade leve";
+sobrePeso.style.backgroundColor = "#FFA500";
+sobrePeso.style.width = "10%";
+sobrePeso.style.margin = ".5% .5%";
+sobrePeso.style.padding = ".5% .2%";
+sobrePeso.style.border = "2px solid #141301";
+sobrePeso.style.borderRadius = "5px";
+sobrePeso.style.textAlign = "center";
+
+const moderada = document.createElement("div");
+legenda.appendChild(moderada);
+moderada.textContent = "obesidade moderada";
+moderada.style.backgroundColor = "#FF4500";
+moderada.style.width = "13%";
+moderada.style.margin = ".5% .5%";
+moderada.style.border = "2px solid #141301";
+moderada.style.padding = ".5% .2%";
+moderada.style.borderRadius = "5px";
+moderada.style.textAlign = "center";
+
+const morbida = document.createElement("div");
+legenda.appendChild(morbida);
+morbida.textContent = "obesidade mórbida";
+morbida.style.backgroundColor = "#FF0000";
+morbida.style.width = "13%";
+morbida.style.margin = ".5% .5%";
+morbida.style.border = "2px solid #141301";
+morbida.style.padding = ".5% .2%";
+morbida.style.borderRadius = "5px";
+morbida.style.textAlign = "center";
 
 
 
