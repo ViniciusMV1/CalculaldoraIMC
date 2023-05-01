@@ -92,7 +92,7 @@ sexo2.addEventListener("mouseenter", function (){
 })
 
 const inputName = document.createElement("input");
-inputName.placeholder = "Digite seu nome";
+inputName.placeholder = "nome";
 inputName.setAttribute("type","text");
 inputName.id = "nome";
 header.appendChild(inputName);
@@ -122,7 +122,7 @@ entrada. style. display = "flex";
 entrada. style. justifyContent = "space-between";
 
 const inputPeso = document.createElement("input");
-inputPeso.placeholder = "Digite seu peso";
+inputPeso.placeholder = "peso";
 inputPeso.setAttribute("type","number")
 inputPeso.id = "peso";
 entrada.appendChild(inputPeso);
@@ -146,7 +146,7 @@ inputPeso.addEventListener("mouseleave", function (){
 });
 
 const inputAltura = document.createElement("input");
-inputAltura.placeholder = "Digite sua altura(Ex: 1.70)";
+inputAltura.placeholder = "altura(Ex: 1.70)";
 inputAltura.setAttribute("type","number");
 inputAltura.id = "altura";
 entrada.appendChild(inputAltura);
@@ -170,7 +170,7 @@ inputAltura.addEventListener("mouseleave", function (){
 })
 
 const inputIdade = document.createElement("input");
-inputIdade.placeholder = "Digite sua idade";
+inputIdade.placeholder = "idade";
 inputIdade.setAttribute("type","number");
 inputIdade.id = "idade";
 entrada.appendChild(inputIdade);
